@@ -33,7 +33,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sshagent(credentials: ['azure-vm-key']) {
+                sshagent(credentials: ['evops-vm_key.pem.pem']) {
 
                     sh """
                     scp -o StrictHostKeyChecking=no \
