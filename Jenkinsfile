@@ -50,14 +50,14 @@ pipeline {
             }
         }
 
-        stage('Health Check') {
-            steps {
-                sh """
-                sleep 20
-                curl -f http://${VM_IP}:8080/guc-backend/
-                """
-            }
-        }
+stage('Health Check') {
+    steps {
+        sh '''
+        sleep 30
+        curl -f http://135.235.218.234:8080/
+        '''
+    }
+}
     }
 
     post {
